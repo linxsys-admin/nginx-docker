@@ -3,8 +3,6 @@ FROM nginx
 EXPOSE 80 443
 
 COPY nginx.conf /etc/nginx/
-COPY htpasswd.users /etc/nginx/
-RUN chmod 0444 /etc/nginx/htpasswd.users
 COPY default.conf /etc/nginx/conf.d/
 
 ENV NGINX_RUN_USER nginx
